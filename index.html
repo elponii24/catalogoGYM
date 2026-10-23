@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitMuse | Catálogo fitness</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <a class="logo" href="#">fit<span>muse</span><small>FITNESS PARA ELLA</small></a>
+    <nav aria-label="Navegación principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotras">Nuestra esencia</a>
+    </nav>
+    <button class="boton-carrito" id="ver-carrito" type="button" aria-label="Ver carrito">
+      ♡ Carrito <span id="contador-carrito">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="portada">
+      <div class="portada-texto">
+        <p class="etiqueta">TU ESPACIO, TU FUERZA</p>
+        <h1>Entrena a tu manera,<br><em>brilla a tu ritmo.</em></h1>
+        <p>Accesorios, ropa y esenciales para acompañarte en cada repetición.</p>
+        <a class="boton-principal" href="#catalogo">Explorar productos <span>↗</span></a>
+      </div>
+      <div class="portada-visual" aria-label="Ilustración decorativa de entrenamiento">
+        <div class="circulo-fondo"></div>
+        <div class="silueta">✦</div>
+        <div class="sticker sticker-uno">STRONG<br>IS BEAUTIFUL</div>
+        <div class="sticker sticker-dos">♡</div>
+        <div class="portada-nota">hecho para<br><strong>sentirte fuerte</strong></div>
+      </div>
+    </section>
+
+    <section class="catalogo seccion" id="catalogo">
+      <div class="titulo-seccion">
+        <div>
+          <p class="etiqueta">ENCUENTRA TUS FAVORITOS</p>
+          <h2>El catálogo</h2>
+        </div>
+        <p class="texto-secundario">Pequeños detalles que hacen más tuyo cada entrenamiento.</p>
+      </div>
+
+      <div class="filtros" role="group" aria-label="Filtrar productos por categoría">
+        <button class="filtro activo" data-categoria="todos" type="button">Todos</button>
+        <button class="filtro" data-categoria="accesorios" type="button">Accesorios</button>
+        <button class="filtro" data-categoria="suplementos" type="button">Suplementos</button>
+        <button class="filtro" data-categoria="ropa" type="button">Ropa</button>
+      </div>
+
+      <p class="resultado" id="mensaje-filtro" aria-live="polite">Mostrando todos los productos</p>
+      <div class="productos" id="lista-productos">
+        <!-- JavaScript coloca aquí las tarjetas de productos -->
+      </div>
+    </section>
+
+    <section class="carrito-panel seccion" id="panel-carrito" hidden>
+      <div class="titulo-seccion">
+        <div><p class="etiqueta">TUS ELECCIONES</p><h2>Tu carrito</h2></div>
+        <button id="cerrar-carrito" class="boton-cerrar" type="button">Cerrar ×</button>
+      </div>
+      <div id="contenido-carrito"></div>
+      <p class="total" id="total-carrito">Total: $0 MXN</p>
+    </section>
+
+    <section class="esencia" id="nosotras">
+      <span class="esencia-icono">✿</span>
+      <div>
+        <p class="etiqueta">FITNESS A TU MANERA</p>
+        <h2>Fuerte, cómoda y tú misma.</h2>
+        <p>FitMuse reúne esenciales para que disfrutes tu proceso, celebres tus avances y entrenes con confianza.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo logo-pie" href="#">fit<span>muse</span></a>
+    <p>Catálogo demostrativo · Productos y precios simulados</p>
+  </footer>
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
