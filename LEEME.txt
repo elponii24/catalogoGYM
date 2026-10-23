@@ -1,0 +1,22 @@
+FITMUSE - Catálogo fitness
+
+ARCHIVOS
+- index.html: estructura de la página
+- styles.css: colores, tamaños y diseño adaptable
+- script.js: productos, filtros y carrito simulado
+- imagenes/: seis ilustraciones locales de productos en formato SVG
+- boceto_anotado.pdf: boceto con anotaciones de los cinco principios
+
+CÓMO ABRIR
+1. Descomprime la carpeta.
+2. Abre index.html con Chrome, Edge o Firefox.
+3. No necesita instalar nada ni tener base de datos.
+
+PRINCIPIOS APLICADOS
+- Visibilidad: cada producto muestra nombre, precio, descripción y acción.
+- Retroalimentación: aparece un aviso al agregar y se actualiza el contador.
+- Restricciones: el producto agotado no se puede agregar.
+- Consistencia: se mantienen colores, tipografía, tarjetas y botones.
+- Affordance: filtros y botones tienen forma y texto que sugieren su uso.
+
+Nota: los precios son de ejemplo y el carrito es simulado. Las imágenes de productos son ilustraciones SVG guardadas en la carpeta imagenes, por lo que funcionan sin descargar archivos externos.

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+
+:root {
+  --rosa: #d65d83;
+  --rosa-oscuro: #a93d63;
+  --rosa-claro: #f9e7ed;
+  --crema: #fffaf6;
+  --texto: #30242a;
+  --suave: #786a70;
+  --borde: #f0dce3;
+  --verde: #557b62;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--texto); background: var(--crema); font-family: 'DM Sans', Arial, sans-serif; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+.encabezado { min-height: 78px; padding: 16px 7%; display: flex; align-items: center; justify-content: space-between; gap: 24px; background: rgba(255,250,246,.96); border-bottom: 1px solid var(--borde); }
+.logo { font-weight: 700; font-size: 28px; letter-spacing: -1.5px; line-height: 1; }
+.logo span { color: var(--rosa); }
+.logo small { display: block; margin-top: 6px; font-size: 8px; letter-spacing: 2.3px; color: var(--suave); }
+nav { display: flex; gap: 30px; color: var(--suave); font-size: 13px; }
+nav a:hover { color: var(--rosa-oscuro); }
+.boton-carrito { border: 1px solid var(--borde); background: white; border-radius: 30px; padding: 10px 15px; color: var(--texto); font-weight: 600; }
+.boton-carrito span { display: inline-grid; place-items: center; background: var(--rosa); color: white; width: 23px; height: 23px; border-radius: 50%; margin-left: 6px; }
+.portada { padding: 55px 9% 65px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; background: linear-gradient(110deg, #fffaf6 48%, #f9e7ed 48%); overflow: hidden; }
+.etiqueta { color: var(--rosa-oscuro); font-size: 10px; letter-spacing: 2px; font-weight: 700; margin: 0 0 14px; }
+h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
+h1 { font-size: clamp(36px, 5vw, 61px); line-height: 1.08; letter-spacing: -1.4px; margin: 0 0 20px; }
+h1 em { color: var(--rosa); }
+.portada-texto > p:not(.etiqueta) { color: var(--suave); max-width: 400px; line-height: 1.8; font-size: 14px; }
+.boton-principal { display: inline-flex; align-items: center; gap: 22px; margin-top: 18px; padding: 14px 20px; background: var(--rosa); color: white; border-radius: 5px; font-size: 13px; font-weight: 700; box-shadow: 0 8px 20px #d65d8326; }
+.boton-principal:hover { background: var(--rosa-oscuro); }
+.portada-visual { min-height: 310px; position: relative; display: grid; place-items: center; }
+.circulo-fondo { width: min(290px, 70vw); height: min(290px, 70vw); border-radius: 50%; background: #f3c9d7; position: absolute; }
+.silueta { position: relative; display: grid; place-items: center; width: 180px; height: 220px; border-radius: 48% 48% 35% 35%; background: linear-gradient(140deg, #d65d83, #9c3e65); color: #ffe9f0; font-size: 100px; box-shadow: 20px 22px 0 #e9a9bf; transform: rotate(-7deg); }
+.sticker { position: absolute; z-index: 1; background: var(--crema); color: var(--rosa-oscuro); box-shadow: 0 8px 25px #7a304018; font-weight: 700; }
+.sticker-uno { top: 28px; right: 0; padding: 13px 16px; border-radius: 50%; font-size: 10px; text-align: center; transform: rotate(9deg); }
+.sticker-dos { bottom: 34px; left: 8%; width: 52px; height: 52px; display: grid; place-items: center; border-radius: 50%; font-size: 30px; }
+.portada-nota { position: absolute; right: 3%; bottom: 20px; font-size: 11px; line-height: 1.5; color: var(--suave); }
+.portada-nota strong { color: var(--texto); }
+.seccion { padding: 65px 8%; }
+.titulo-seccion { display: flex; align-items: end; justify-content: space-between; gap: 24px; }
+.titulo-seccion h2, .esencia h2 { margin: 0; font-size: 36px; }
+.texto-secundario { max-width: 300px; font-size: 13px; line-height: 1.7; color: var(--suave); }
+.filtros { display: flex; gap: 10px; flex-wrap: wrap; margin: 30px 0 14px; }
+.filtro { padding: 10px 17px; border-radius: 30px; border: 1px solid var(--borde); background: white; color: var(--suave); font-size: 12px; transition: .2s; }
+.filtro:hover, .filtro.activo { color: white; background: var(--rosa); border-color: var(--rosa); }
+.resultado { min-height: 18px; color: var(--suave); font-size: 11px; margin: 12px 0 18px; }
+.productos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.producto { border: 1px solid var(--borde); border-radius: 10px; overflow: hidden; background: white; transition: transform .2s, box-shadow .2s; }
+.producto:hover { transform: translateY(-4px); box-shadow: 0 12px 28px #6f334014; }
+.producto-imagen { height: 190px; display: grid; place-items: center; position: relative; overflow: hidden; background: #f9edf1; }
+.imagen-producto { width: 100%; height: 100%; object-fit: cover; display: block; }
+.producto:nth-child(3n+2) .producto-imagen { background: #f2e9e1; }
+.producto:nth-child(3n) .producto-imagen { background: #eee9f5; }
+.etiqueta-producto { position: absolute; top: 12px; left: 12px; border-radius: 3px; padding: 6px 8px; background: white; color: var(--rosa-oscuro); font-size: 9px; font-weight: 700; letter-spacing: .5px; }
+.etiqueta-producto.agotado { color: #fff; background: #62565b; }
+.producto-info { padding: 17px; }
+.categoria { color: var(--rosa-oscuro); font-size: 9px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 700; }
+.producto h3 { font-size: 15px; margin: 7px 0; }
+.descripcion { min-height: 39px; color: var(--suave); font-size: 11px; line-height: 1.6; margin: 0 0 14px; }
+.producto-pie { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.precio { font-size: 16px; font-weight: 700; white-space: nowrap; }
+.boton-agregar { border: 0; border-radius: 5px; padding: 10px 12px; background: var(--texto); color: white; font-size: 11px; font-weight: 700; }
+.boton-agregar:hover:not(:disabled) { background: var(--rosa); }
+.boton-agregar:disabled { background: #e4dfe1; color: #82777c; cursor: not-allowed; }
+.esencia { margin: 0 8% 65px; padding: 35px 7%; display: flex; align-items: center; gap: 25px; background: #f8e6ec; border-radius: 12px; }
+.esencia-icono { font-size: 45px; color: var(--rosa); }
+.esencia h2 { font-size: 29px; }
+.esencia p:last-child { max-width: 600px; color: var(--suave); line-height: 1.7; font-size: 13px; }
+.carrito-panel { padding-top: 10px; }
+.boton-cerrar { border: 1px solid var(--borde); background: white; padding: 9px 14px; border-radius: 5px; }
+.linea-carrito { display: flex; justify-content: space-between; gap: 15px; padding: 14px 0; border-bottom: 1px solid var(--borde); font-size: 13px; }
+.total { text-align: right; font-weight: 700; }
+.vacio { padding: 20px 0; color: var(--suave); }
+.aviso { position: fixed; bottom: 22px; left: 50%; transform: translate(-50%, 20px); padding: 13px 20px; border-radius: 8px; background: #30242a; color: white; font-size: 13px; opacity: 0; pointer-events: none; transition: .25s; box-shadow: 0 8px 25px #0002; z-index: 5; }
+.aviso.visible { opacity: 1; transform: translate(-50%, 0); }
+footer { border-top: 1px solid var(--borde); padding: 25px 8%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.logo-pie { font-size: 22px; }
+footer p { color: var(--suave); font-size: 11px; }
+button:focus-visible, a:focus-visible { outline: 3px solid #b74770; outline-offset: 3px; }
+[hidden] { display: none !important; }
+@media (max-width: 760px) {
+  .encabezado { padding: 15px 5%; flex-wrap: wrap; }
+  nav { order: 3; width: 100%; justify-content: center; }
+  .portada { grid-template-columns: 1fr; padding: 45px 7%; gap: 15px; background: linear-gradient(180deg, #fffaf6 55%, #f9e7ed 55%); }
+  .portada-visual { min-height: 260px; }
+  .seccion { padding: 45px 6%; }
+  .titulo-seccion { align-items: start; flex-direction: column; gap: 8px; }
+  .productos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+  .producto-imagen { height: 145px; }
+  .imagen-producto { width: 100%; height: 100%; object-fit: cover; }
+  .producto-info { padding: 12px; }
+  .producto-pie { align-items: start; flex-direction: column; }
+  .boton-agregar { width: 100%; }
+  .esencia { margin: 0 6% 40px; padding: 25px; align-items: start; }
+  .esencia h2 { font-size: 24px; }
+  footer { padding: 22px 6%; }
+}
+@media (max-width: 400px) { .productos { grid-template-columns: 1fr; } .producto-imagen { height: 180px; } }
